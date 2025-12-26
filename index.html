@@ -1,25 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>RAPT32のサイト</title>
-    <style>
-        body { background-color: #f0f8ff; font-family: sans-serif; text-align: center; }
-        h1 { color: #333; }
-        p { color: #666; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サンプルサイト</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    /* 基本設定：画面全体の余白をゼロにする */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #000; /* 背景を黒にすると公式風になります */
+}
+
+/* 親要素をFlexboxにする */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* 画面の高さ一杯に表示 */
+}
+
+/* 左側のメニュー（幅を固定する） */
+.sidebar {
+    width: 300px; /* メニューの横幅 */
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    z-index: 10;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.menu-list {
+    list-style: none;
+}
+
+.menu-list li {
+    margin-bottom: 25px;
+}
+
+.menu-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* マウスを乗せた時の動き */
+.menu-list li a:hover {
+    color: #ff0000; /* 呪術風なら赤など */
+    padding-left: 10px;
+}
+
+/* 右側のメインビジュアル（残りの幅をすべて使う） */
+.hero-section {
+    flex: 1; /* これで残りの画面幅をすべて占有する */
+    background-image: url('https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=1500&q=80'); /* ここに画像URLを入れる */
+    background-size: cover; /* 画像を画面いっぱいに広げる */
+    background-position: center; /* 画像の中央を表示 */
+    background-repeat: no-repeat;
+}
+
+/* スマホ対応：画面が狭くなったら縦並びにする */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    .hero-section {
+        height: 300px;
+    }
+}
+</style>
+
 </head>
 <body>
-    <h1>RAPT32のホームページへようこそ！</h1>
-    <p>これから少しずつデザインを学んでいきます。</p>
-    
-    <img src="profile.jpg" alt="私の写真" width="200">
-    
-    <br>
-    <a href="https://x.com/RAPTritsumei">公式Xはこちら</a>
-    <br>
-    <a href="https://www.instagram.com/raptritsumei/">公式インスタグラムはこちら</a>
-    <br>
-    <a herf="https://www.ritsumei.ac.jp/features/sky/rapt">立命館大学空に関する活動はこちら</a>
+
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>SITE LOGO</h1>
+            </div>
+            <ul class="menu-list">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">STORY</a></li>
+                <li><a href="#">CHARACTER</a></li>
+                <li><a href="#">MOVIE</a></li>
+                <li><a href="#">GOODS</a></li>
+            </ul>
+        </nav>
+
+        <main class="hero-section">
+            </main>
+    </div>
+
 </body>
 </html>
+
