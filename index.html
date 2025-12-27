@@ -28,7 +28,7 @@ body, html {
 
 /* 左側のメニュー（幅を固定する） */
 .sidebar {
-    width: 300px; /* メニューの横幅 */
+    width: 250px; /* メニューの横幅 */
     height: 100%;
     background-color: #111;
     color: #fff;
@@ -69,13 +69,13 @@ body, html {
 /* 右側のメインビジュアル（残りの幅をすべて使う） */
 .hero-section {
     flex: 1; /* これで残りの画面幅をすべて占有する */
-    background-image: url('desktop/rapt_site/images/spera.jpg'); /* ここに画像URLを入れる */
+    background-image: url('images/spera.jpg.jpg'); /* ここに画像URLを入れる */
     background-size: cover; /* 画像を画面いっぱいに広げる */
     background-position: center; /* 画像の中央を表示 */
     background-repeat: no-repeat;
 }
 
-/* スマホ対応：画面が狭くなったら縦並びにする */
+/* スマホ対応：画面が狭くなったら縦並びにする.圧倒的に見にくいのでgeminiのように、ボタンを押したら見えるようにする*/
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
